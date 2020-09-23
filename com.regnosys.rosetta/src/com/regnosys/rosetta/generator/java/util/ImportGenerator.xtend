@@ -44,8 +44,8 @@ import java.util.List
 import org.apache.log4j.Logger
 import org.eclipse.emf.ecore.EClass
 import org.eclipse.xtend.lib.annotations.Accessors
-
 import static extension com.regnosys.rosetta.generator.java.util.JavaClassTranslator.*
+import com.regnosys.rosetta.rosetta.BlueprintFormat
 import com.regnosys.rosetta.generator.java.RosettaJavaPackages.RootPackage
 
 class ImportGenerator {
@@ -297,6 +297,10 @@ class ImportGenerator {
 			imports.add('''«packages.defaultLib.name».functions.MapperS''')
 		}
 		imports.add(packages.blueprintLib.name + ".runner.actions.ReduceBy")
+	}
+
+	def addFormat() {
+		imports.add(packages.blueprintLib.name + ".runner.actions.Format")
 	}
 
 	def addGrouper(BlueprintGroup group) {
