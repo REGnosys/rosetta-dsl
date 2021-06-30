@@ -46,6 +46,7 @@ import static com.regnosys.rosetta.generator.java.util.ModelGeneratorUtil.*
 import com.rosetta.model.lib.mapper.Mapper
 import com.regnosys.rosetta.generator.java.util.ParameterizedType
 import java.util.List
+import com.regnosys.rosetta.generator.java.enums.EnumHelper
 import com.regnosys.rosetta.rosetta.RosettaCallableWithArgsCall
 
 class FuncGenerator {
@@ -227,9 +228,8 @@ class FuncGenerator {
 		}'''
 	}
 	
-	
 	private def QualifiedName toTargetClassName(FunctionDispatch ele) {
-		return QualifiedName.create(ele.name).append(ele.value.value.name)
+		return QualifiedName.create(ele.name).append(EnumHelper.convertValues(ele.value.value))
 	}
 	
 	private def StringConcatenationClient assign(Operation op, Map<ShortcutDeclaration, Boolean> outs,
