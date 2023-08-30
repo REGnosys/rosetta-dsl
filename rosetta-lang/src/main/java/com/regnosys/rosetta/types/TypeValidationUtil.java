@@ -3,7 +3,7 @@ package com.regnosys.rosetta.types;
 import com.regnosys.rosetta.rosetta.expression.ModifiableBinaryOperation;
 import com.regnosys.rosetta.types.builtin.RBuiltinTypeService;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import com.regnosys.rosetta.rosetta.RosettaCardinality;
 

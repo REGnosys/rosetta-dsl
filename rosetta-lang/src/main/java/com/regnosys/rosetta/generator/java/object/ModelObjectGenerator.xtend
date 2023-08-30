@@ -28,7 +28,7 @@ import com.regnosys.rosetta.types.TypeSystem
 import com.rosetta.util.types.JavaClass
 import com.rosetta.util.DottedPath
 import com.rosetta.util.types.JavaParameterizedType
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class ModelObjectGenerator {
 	

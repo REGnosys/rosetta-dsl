@@ -37,7 +37,7 @@ import com.regnosys.rosetta.generator.java.reports.RuleGenerator
 import com.regnosys.rosetta.generator.java.condition.ConditionGenerator
 import com.regnosys.rosetta.generator.java.reports.ReportGenerator
 import com.regnosys.rosetta.generator.java.blueprints.BlueprintGenerator
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 /**
  * Generates code from your model files on save.

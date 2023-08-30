@@ -1,9 +1,9 @@
 package com.rosetta.model.lib.validation;
 
-import javax.inject.Inject;
-
 import com.google.inject.Injector;
 import com.rosetta.model.lib.RosettaModelObject;
+
+import jakarta.inject.Inject;
 
 public interface ValidatorFactory {
 

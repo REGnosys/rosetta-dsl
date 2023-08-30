@@ -22,7 +22,7 @@ import com.regnosys.rosetta.rosetta.RosettaSymbol
 import com.regnosys.rosetta.types.RFunction
 import com.regnosys.rosetta.rosetta.expression.RosettaExpression
 import org.eclipse.xtext.EcoreUtil2
-import javax.inject.Inject
+import jakarta.inject.Inject
 import com.regnosys.rosetta.rosetta.RosettaBlueprint
 import com.regnosys.rosetta.types.RObjectFactory
 

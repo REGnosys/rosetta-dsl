@@ -56,7 +56,7 @@ import com.regnosys.rosetta.rosetta.RosettaTypeAlias
 import com.regnosys.rosetta.rosetta.ParametrizedRosettaType
 import com.regnosys.rosetta.rosetta.TypeParameter
 import com.regnosys.rosetta.rosetta.TypeCallArgument
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class RosettaFormatter extends AbstractRosettaFormatter2 {
 	

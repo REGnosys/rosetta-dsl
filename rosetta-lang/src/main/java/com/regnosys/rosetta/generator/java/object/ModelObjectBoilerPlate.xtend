@@ -23,7 +23,7 @@ import com.regnosys.rosetta.generator.java.JavaScope
 import com.regnosys.rosetta.generator.java.types.JavaTypeTranslator
 import com.regnosys.rosetta.types.RDataType
 import com.rosetta.util.types.JavaType
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class ModelObjectBoilerPlate {
 

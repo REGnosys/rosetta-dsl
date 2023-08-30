@@ -22,7 +22,7 @@ import static org.hamcrest.MatcherAssert.*
 import static org.junit.jupiter.api.Assertions.*
 import static org.mockito.Mockito.mock
 import org.eclipse.xtext.diagnostics.Diagnostic
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 @InjectWith(RosettaInjectorProvider)
 @ExtendWith(InjectionExtension)
@@ -189,8 +189,8 @@ class RosettaBlueprintTest {
 			import com.rosetta.test.model.BarQuxReport;
 			import com.rosetta.test.model.BarReport;
 			import com.rosetta.test.model.BarReport.BarReportBuilder;
+			import jakarta.inject.Inject;
 			import java.util.Optional;
-			import javax.inject.Inject;
 			
 			
 			@ImplementedBy(TEST_REGMiFIRReportFunction.TEST_REGMiFIRReportFunctionDefault.class)
@@ -455,8 +455,8 @@ class RosettaBlueprintTest {
 			import com.rosetta.test.model.BarQuxReport;
 			import com.rosetta.test.model.BarReport;
 			import com.rosetta.test.model.BarReport.BarReportBuilder;
+			import jakarta.inject.Inject;
 			import java.util.Optional;
-			import javax.inject.Inject;
 			
 			
 			@ImplementedBy(TEST_REGMiFIRReportFunction.TEST_REGMiFIRReportFunctionDefault.class)
@@ -715,8 +715,8 @@ class RosettaBlueprintTest {
 			import com.rosetta.test.model.BarQuxReport;
 			import com.rosetta.test.model.BarReport;
 			import com.rosetta.test.model.BarReport.BarReportBuilder;
+			import jakarta.inject.Inject;
 			import java.util.Optional;
-			import javax.inject.Inject;
 			
 			
 			@ImplementedBy(TEST_REGMiFIRReportFunction.TEST_REGMiFIRReportFunctionDefault.class)
@@ -846,8 +846,8 @@ class RosettaBlueprintTest {
 			import com.rosetta.test.model.BarQuxReport;
 			import com.rosetta.test.model.BarReport;
 			import com.rosetta.test.model.BarReport.BarReportBuilder;
+			import jakarta.inject.Inject;
 			import java.util.Optional;
-			import javax.inject.Inject;
 			
 			
 			@ImplementedBy(TEST_REGMiFIRReportFunction.TEST_REGMiFIRReportFunctionDefault.class)
@@ -1099,8 +1099,8 @@ class RosettaBlueprintTest {
 			import com.rosetta.test.model.Bar;
 			import com.rosetta.test.model.BarReport;
 			import com.rosetta.test.model.BarReport.BarReportBuilder;
+			import jakarta.inject.Inject;
 			import java.util.Optional;
-			import javax.inject.Inject;
 			
 			
 			@ImplementedBy(TEST_REGMiFIRReportFunction.TEST_REGMiFIRReportFunctionDefault.class)
@@ -1607,7 +1607,7 @@ class RosettaBlueprintTest {
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Bar;
 				import com.rosetta.test.model.Foo;
-				import javax.inject.Inject;
+				import jakarta.inject.Inject;
 
 				import static com.regnosys.rosetta.blueprints.BlueprintBuilder.*;
 				
@@ -1774,7 +1774,7 @@ class RosettaBlueprintTest {
 				import com.rosetta.model.lib.expression.CardinalityOperator;
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Input;
-				import javax.inject.Inject;
+				import jakarta.inject.Inject;
 
 				import static com.regnosys.rosetta.blueprints.BlueprintBuilder.*;
 				import static com.rosetta.model.lib.expression.ExpressionOperators.*;
@@ -1851,8 +1851,8 @@ class RosettaBlueprintTest {
 				import com.regnosys.rosetta.blueprints.runner.data.RuleIdentifier;
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Input;
+				import jakarta.inject.Inject;
 				import java.math.BigDecimal;
-				import javax.inject.Inject;
 				
 				import static com.regnosys.rosetta.blueprints.BlueprintBuilder.*;
 				
@@ -1939,7 +1939,7 @@ class RosettaBlueprintTest {
 				import com.rosetta.test.model.Bar;
 				import com.rosetta.test.model.Foo;
 				import com.rosetta.test.model.Input;
-				import javax.inject.Inject;
+				import jakarta.inject.Inject;
 
 				import static com.regnosys.rosetta.blueprints.BlueprintBuilder.*;
 				
@@ -2020,7 +2020,7 @@ class RosettaBlueprintTest {
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Input1;
 				import com.rosetta.test.model.Input2;
-				import javax.inject.Inject;
+				import jakarta.inject.Inject;
 				
 				import static com.regnosys.rosetta.blueprints.BlueprintBuilder.*;
 				
@@ -2118,7 +2118,7 @@ class RosettaBlueprintTest {
 		import com.rosetta.model.lib.expression.CardinalityOperator;
 		import com.rosetta.model.lib.mapper.MapperS;
 		import com.rosetta.test.model.Input;
-		import javax.inject.Inject;
+		import jakarta.inject.Inject;
 
 		import static com.regnosys.rosetta.blueprints.BlueprintBuilder.*;
 		import static com.rosetta.model.lib.expression.ExpressionOperators.*;
@@ -2239,7 +2239,7 @@ class RosettaBlueprintTest {
 			import com.rosetta.model.lib.mapper.MapperS;
 			import com.rosetta.test.model.Avengers;
 			import com.rosetta.test.model.Hero;
-			import javax.inject.Inject;
+			import jakarta.inject.Inject;
 			
 			import static com.regnosys.rosetta.blueprints.BlueprintBuilder.*;
 			import static com.rosetta.model.lib.expression.ExpressionOperators.*;
@@ -2337,7 +2337,7 @@ class RosettaBlueprintTest {
 			import com.rosetta.model.lib.expression.CardinalityOperator;
 			import com.rosetta.model.lib.mapper.MapperS;
 			import com.rosetta.test.model.Foo;
-			import javax.inject.Inject;
+			import jakarta.inject.Inject;
 
 			import static com.regnosys.rosetta.blueprints.BlueprintBuilder.*;
 			import static com.rosetta.model.lib.expression.ExpressionOperators.*;

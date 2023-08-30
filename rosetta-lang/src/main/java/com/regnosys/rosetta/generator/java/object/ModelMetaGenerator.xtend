@@ -28,7 +28,7 @@ import com.regnosys.rosetta.generator.java.RosettaJavaPackages.RootPackage
 import com.regnosys.rosetta.generator.java.JavaScope
 import com.regnosys.rosetta.generator.java.types.JavaTypeTranslator
 import com.regnosys.rosetta.types.RDataType
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class ModelMetaGenerator {
 

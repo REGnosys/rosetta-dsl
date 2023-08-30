@@ -3,7 +3,7 @@ package com.regnosys.rosetta.maven;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.xtext.generator.GeneratorDelegate;

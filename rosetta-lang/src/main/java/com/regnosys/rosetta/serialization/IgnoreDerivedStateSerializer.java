@@ -3,7 +3,7 @@ package com.regnosys.rosetta.serialization;
 import java.io.IOException;
 import java.io.Writer;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.resource.SaveOptions;

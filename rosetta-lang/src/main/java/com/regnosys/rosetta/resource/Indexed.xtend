@@ -7,7 +7,7 @@ import org.eclipse.xtext.naming.QualifiedName
 import org.eclipse.xtext.resource.EObjectDescription
 import org.eclipse.xtext.resource.IEObjectDescription
 import org.eclipse.xtext.naming.IQualifiedNameProvider
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class Indexed {
 	

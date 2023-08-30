@@ -13,7 +13,7 @@ import org.junit.jupiter.api.^extension.ExtendWith
 import static com.regnosys.rosetta.rosetta.simple.SimplePackage.Literals.*
 import static org.hamcrest.MatcherAssert.*
 import static org.junit.jupiter.api.Assertions.*
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 @InjectWith(RosettaInjectorProvider)
 @ExtendWith(InjectionExtension)
@@ -134,7 +134,7 @@ class RosettaBlueprintRepeatableRuleTest {
 				import com.regnosys.rosetta.blueprints.runner.data.RuleIdentifier;
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Foo;
-				import javax.inject.Inject;
+				import jakarta.inject.Inject;
 				
 				import static com.regnosys.rosetta.blueprints.BlueprintBuilder.*;
 				

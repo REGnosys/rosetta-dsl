@@ -2,7 +2,7 @@ package com.regnosys.rosetta.generator.java.reports
 
 import com.regnosys.rosetta.generator.java.RosettaJavaPackages.RootPackage
 import com.regnosys.rosetta.rosetta.RosettaBlueprint
-import javax.inject.Inject
+import jakarta.inject.Inject
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import com.regnosys.rosetta.generator.java.util.ImportManagerExtension
 import com.regnosys.rosetta.generator.java.types.JavaTypeTranslator

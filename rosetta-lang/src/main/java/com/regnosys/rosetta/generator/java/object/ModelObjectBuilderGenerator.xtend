@@ -17,7 +17,7 @@ import com.regnosys.rosetta.generator.java.JavaScope
 import com.regnosys.rosetta.generator.java.types.JavaTypeTranslator
 import com.regnosys.rosetta.types.RDataType
 import com.regnosys.rosetta.types.TypeSystem
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class ModelObjectBuilderGenerator {
 	

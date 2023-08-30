@@ -44,7 +44,7 @@ import com.regnosys.rosetta.types.builtin.RBuiltinTypeService
 import com.regnosys.rosetta.RosettaExtensions
 import com.regnosys.rosetta.types.CardinalityProvider
 import com.regnosys.rosetta.rosetta.RosettaBlueprint
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class RosettaBlueprintTypeResolver {
 	

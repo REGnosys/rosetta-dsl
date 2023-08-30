@@ -26,7 +26,6 @@ import java.util.Collection
 import java.util.List
 import java.util.Map
 import java.util.Set
-import javax.inject.Inject
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.EObject
 
@@ -37,6 +36,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet
 import com.regnosys.rosetta.rosetta.RosettaRecordType
 import java.util.Optional
 import com.regnosys.rosetta.types.RAttribute
+import jakarta.inject.Inject
 
 class RosettaExtensions {
 	

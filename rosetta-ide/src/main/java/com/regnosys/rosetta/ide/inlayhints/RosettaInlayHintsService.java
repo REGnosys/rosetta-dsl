@@ -1,6 +1,6 @@
 package com.regnosys.rosetta.ide.inlayhints;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.lsp4j.InlayHint;

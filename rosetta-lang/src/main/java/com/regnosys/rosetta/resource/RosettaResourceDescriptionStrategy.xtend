@@ -6,7 +6,7 @@ import org.eclipse.xtext.naming.IQualifiedNameProvider
 import org.eclipse.xtext.resource.IEObjectDescription
 import org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy
 import org.eclipse.xtext.util.IAcceptor
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class RosettaResourceDescriptionStrategy extends DefaultResourceDescriptionStrategy {
 
