@@ -30,7 +30,13 @@ public class RosettaQuickFixCodeActionService implements ICodeActionService2 {
 
 	@Override
 	public List<Either<Command, CodeAction>> getCodeActions(Options options) {
-
+		boolean handleQuickfixes = options.getCodeActionParams().getContext().getOnly() == null
+				|| options.getCodeActionParams().getContext().getOnly().isEmpty()
+				|| options.getCodeActionParams().getContext().getOnly().contains(CodeActionKind.QuickFix);
+		if (!handleQuickfixes) {
+			return Collections.emptyList();
+		}
+		
 		List<Either<Command, CodeAction>> result = new ArrayList<>();
 		for (Diagnostic diagnostic : options.getCodeActionParams().getContext().getDiagnostics()) {
 			if (handlesDiagnostic(diagnostic)) {
