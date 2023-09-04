@@ -2,12 +2,12 @@ package com.rosetta.model.lib.qualify;
 
 import java.util.function.Function;
 
-import javax.inject.Inject;
-
 import com.google.inject.Injector;
 import com.rosetta.model.lib.RosettaModelObject;
 import com.rosetta.model.lib.expression.ComparisonResult;
 import com.rosetta.model.lib.functions.IQualifyFunctionExtension;
+
+import jakarta.inject.Inject;
 
 public interface QualifyFunctionFactory {
 

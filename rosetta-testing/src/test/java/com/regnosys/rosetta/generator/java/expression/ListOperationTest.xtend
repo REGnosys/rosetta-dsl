@@ -19,7 +19,7 @@ import static com.google.common.collect.ImmutableMap.*
 import static org.hamcrest.CoreMatchers.*
 import static org.hamcrest.MatcherAssert.assertThat
 import static org.junit.jupiter.api.Assertions.*
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 @ExtendWith(InjectionExtension)
 @InjectWith(RosettaInjectorProvider)
@@ -59,11 +59,11 @@ class ListOperationTest {
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Foo;
 				import com.rosetta.test.model.Foo.FooBuilder;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
 				import java.util.Optional;
 				import java.util.stream.Collectors;
-				import javax.inject.Inject;
 				
 				import static com.rosetta.model.lib.expression.ExpressionOperators.*;
 				
@@ -160,11 +160,11 @@ class ListOperationTest {
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Foo;
 				import com.rosetta.test.model.Foo.FooBuilder;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
 				import java.util.Optional;
 				import java.util.stream.Collectors;
-				import javax.inject.Inject;
 				
 				import static com.rosetta.model.lib.expression.ExpressionOperators.*;
 				
@@ -299,11 +299,11 @@ class ListOperationTest {
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Foo2;
 				import com.rosetta.test.model.Foo2.Foo2Builder;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
 				import java.util.Optional;
 				import java.util.stream.Collectors;
-				import javax.inject.Inject;
 				
 				import static com.rosetta.model.lib.expression.ExpressionOperators.*;
 				
@@ -403,11 +403,11 @@ class ListOperationTest {
 				import com.rosetta.model.metafields.FieldWithMetaString;
 				import com.rosetta.test.model.FooWithScheme;
 				import com.rosetta.test.model.FooWithScheme.FooWithSchemeBuilder;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
 				import java.util.Optional;
 				import java.util.stream.Collectors;
-				import javax.inject.Inject;
 				
 				import static com.rosetta.model.lib.expression.ExpressionOperators.*;
 				
@@ -969,11 +969,11 @@ class ListOperationTest {
 				import com.rosetta.test.model.Bar;
 				import com.rosetta.test.model.Foo;
 				import com.rosetta.test.model.Foo.FooBuilder;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
 				import java.util.Optional;
 				import java.util.stream.Collectors;
-				import javax.inject.Inject;
 				
 				import static com.rosetta.model.lib.expression.ExpressionOperators.*;
 				
@@ -1607,11 +1607,11 @@ class ListOperationTest {
 				import com.rosetta.test.model.Bar;
 				import com.rosetta.test.model.Foo;
 				import com.rosetta.test.model.Foo.FooBuilder;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
 				import java.util.Optional;
 				import java.util.stream.Collectors;
-				import javax.inject.Inject;
 				
 				
 				@ImplementedBy(FuncFoo.FuncFooDefault.class)
@@ -1940,11 +1940,11 @@ class ListOperationTest {
 				import com.rosetta.test.model.Bar;
 				import com.rosetta.test.model.Bar.BarBuilder;
 				import com.rosetta.test.model.Foo;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
 				import java.util.Optional;
 				import java.util.stream.Collectors;
-				import javax.inject.Inject;
 				
 				
 				@ImplementedBy(FuncFoo.FuncFooDefault.class)
@@ -2080,11 +2080,11 @@ class ListOperationTest {
 				import com.rosetta.test.model.Bar;
 				import com.rosetta.test.model.Bar.BarBuilder;
 				import com.rosetta.test.model.Foo;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
 				import java.util.Optional;
 				import java.util.stream.Collectors;
-				import javax.inject.Inject;
 				
 				
 				@ImplementedBy(FuncFoo.FuncFooDefault.class)
@@ -2337,9 +2337,9 @@ class ListOperationTest {
 				import com.rosetta.model.lib.functions.RosettaFunction;
 				import com.rosetta.model.lib.mapper.MapperC;
 				import com.rosetta.model.lib.mapper.MapperS;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
-				import javax.inject.Inject;
 				import ns1.Bar;
 				import ns1.Foo;
 				
@@ -2511,9 +2511,9 @@ class ListOperationTest {
 				import com.rosetta.model.lib.functions.RosettaFunction;
 				import com.rosetta.model.lib.mapper.MapperC;
 				import com.rosetta.model.lib.mapper.MapperS;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
-				import javax.inject.Inject;
 				import ns1.Bar;
 				import ns1.Foo;
 				import ns1.functions.GetFoo;
@@ -2612,9 +2612,9 @@ class ListOperationTest {
 				import com.rosetta.model.lib.functions.RosettaFunction;
 				import com.rosetta.model.lib.mapper.MapperC;
 				import com.rosetta.model.lib.mapper.MapperS;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
-				import javax.inject.Inject;
 				import ns1.Bar;
 				import ns1.Foo;
 				import ns1.functions.GetBaz;
@@ -3328,9 +3328,9 @@ class ListOperationTest {
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Foo;
 				import com.rosetta.test.model.Foo.FooBuilder;
+				import jakarta.inject.Inject;
 				import java.util.List;
 				import java.util.Optional;
-				import javax.inject.Inject;
 				
 				
 				@ImplementedBy(FuncFoo.FuncFooDefault.class)
@@ -3763,11 +3763,11 @@ class ListOperationTest {
 				import com.rosetta.model.lib.mapper.MapperS;
 				import com.rosetta.test.model.Foo;
 				import com.rosetta.test.model.Foo.FooBuilder;
+				import jakarta.inject.Inject;
 				import java.util.ArrayList;
 				import java.util.List;
 				import java.util.Optional;
 				import java.util.stream.Collectors;
-				import javax.inject.Inject;
 				
 				
 				@ImplementedBy(FuncFoo.FuncFooDefault.class)

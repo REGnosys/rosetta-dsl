@@ -130,7 +130,7 @@ import com.regnosys.rosetta.rosetta.expression.ToStringOperation
 import com.regnosys.rosetta.types.builtin.RBasicType
 import com.regnosys.rosetta.types.REnumType
 import java.util.Optional
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 // TODO: split expression validator
 // TODO: type check type call arguments

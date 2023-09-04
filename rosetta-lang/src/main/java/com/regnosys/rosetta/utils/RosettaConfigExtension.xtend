@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.xtext.resource.IResourceDescriptionsProvider
 
 import static com.regnosys.rosetta.rosetta.RosettaPackage.Literals.*
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class RosettaConfigExtension {
 

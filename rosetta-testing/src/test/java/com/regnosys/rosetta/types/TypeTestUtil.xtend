@@ -5,7 +5,7 @@ import com.regnosys.rosetta.rosetta.expression.RosettaExpression
 import static org.junit.jupiter.api.Assertions.*
 import com.regnosys.rosetta.tests.util.ExpressionValidationHelper
 import com.regnosys.rosetta.tests.util.ExpressionParser
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class TypeTestUtil {
 	@Inject

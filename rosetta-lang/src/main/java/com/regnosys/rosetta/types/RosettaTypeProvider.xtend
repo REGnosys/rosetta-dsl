@@ -68,7 +68,7 @@ import com.regnosys.rosetta.rosetta.expression.ToIntOperation
 import com.regnosys.rosetta.rosetta.expression.ToNumberOperation
 import com.regnosys.rosetta.rosetta.expression.ToStringOperation
 import com.regnosys.rosetta.rosetta.expression.ToTimeOperation
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class RosettaTypeProvider extends RosettaExpressionSwitch<RType, Map<EObject, RType>> {
 

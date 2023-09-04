@@ -10,7 +10,7 @@ import org.eclipse.lsp4j.TextDocumentIdentifier
 import org.eclipse.lsp4j.Range
 import org.eclipse.lsp4j.Position
 import org.eclipse.lsp4j.SemanticTokensParams
-import javax.inject.Inject
+import jakarta.inject.Inject
 import com.regnosys.rosetta.ide.semantictokens.SemanticToken
 import com.regnosys.rosetta.ide.server.RosettaLanguageServerImpl
 import org.eclipse.xtext.testing.TextDocumentConfiguration

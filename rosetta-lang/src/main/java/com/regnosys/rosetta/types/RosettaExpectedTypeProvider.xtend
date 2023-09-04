@@ -10,7 +10,7 @@ import static com.regnosys.rosetta.rosetta.expression.ExpressionPackage.Literals
 import static com.regnosys.rosetta.rosetta.simple.SimplePackage.Literals.*
 import com.regnosys.rosetta.rosetta.expression.RosettaSymbolReference
 import com.regnosys.rosetta.types.builtin.RBuiltinTypeService
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class RosettaExpectedTypeProvider {
 	

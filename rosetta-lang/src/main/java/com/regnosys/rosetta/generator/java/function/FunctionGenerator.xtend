@@ -59,7 +59,7 @@ import static com.regnosys.rosetta.generator.java.enums.EnumHelper.*
 import static com.regnosys.rosetta.generator.java.util.ModelGeneratorUtil.*
 import com.regnosys.rosetta.utils.ImplicitVariableUtil
 import com.rosetta.util.types.JavaParameterizedType
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class FunctionGenerator {
 

@@ -54,7 +54,7 @@ import com.regnosys.rosetta.types.RType
 import com.regnosys.rosetta.rosetta.RosettaTypeAlias
 import com.regnosys.rosetta.rosetta.TypeCall
 import com.regnosys.rosetta.rosetta.ParametrizedRosettaType
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 /**
  * This class contains custom scoping description.

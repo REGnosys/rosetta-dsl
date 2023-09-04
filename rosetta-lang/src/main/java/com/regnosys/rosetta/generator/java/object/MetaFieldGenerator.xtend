@@ -38,7 +38,7 @@ import org.eclipse.xtext.EcoreUtil2
 import com.regnosys.rosetta.scoping.RosettaScopeProvider
 import com.rosetta.util.types.JavaClass
 import com.rosetta.util.types.JavaParameterizedType
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class MetaFieldGenerator {
 	@Inject extension ImportManagerExtension

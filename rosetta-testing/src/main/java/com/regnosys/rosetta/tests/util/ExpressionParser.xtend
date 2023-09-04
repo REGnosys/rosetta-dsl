@@ -36,7 +36,7 @@ import com.regnosys.rosetta.scoping.RosettaScopeProvider
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.scoping.IScope
 import com.regnosys.rosetta.rosetta.RosettaModel
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class ExpressionParser {
 	@Inject IParser parser

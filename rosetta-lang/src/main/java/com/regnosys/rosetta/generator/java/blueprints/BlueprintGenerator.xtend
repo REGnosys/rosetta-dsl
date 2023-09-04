@@ -67,7 +67,7 @@ import java.util.Optional
 import java.util.function.Supplier
 import java.util.stream.Collectors
 import java.util.stream.Stream
-import javax.inject.Inject
+import jakarta.inject.Inject
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.xtend2.lib.StringConcatenationClient

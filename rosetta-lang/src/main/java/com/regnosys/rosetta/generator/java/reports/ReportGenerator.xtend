@@ -10,7 +10,7 @@ import com.regnosys.rosetta.types.RObjectFactory
 import com.rosetta.model.lib.reports.ReportFunction
 import com.rosetta.util.types.JavaInterface
 import com.rosetta.util.types.JavaParameterizedType
-import javax.inject.Inject
+import jakarta.inject.Inject
 import org.eclipse.xtext.generator.IFileSystemAccess2
 
 class ReportGenerator {

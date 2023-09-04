@@ -18,7 +18,7 @@ import com.rosetta.model.lib.RosettaModelObject
 import org.eclipse.xtend2.lib.StringConcatenationClient
 import java.math.BigDecimal
 import com.rosetta.model.lib.ModelSymbolId
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 @InjectWith(RosettaInjectorProvider)
 @ExtendWith(InjectionExtension)
@@ -92,8 +92,8 @@ class TabulatorTest {
 			import com.rosetta.model.lib.reports.Tabulator.Field;
 			import com.rosetta.model.lib.reports.Tabulator.FieldValue;
 			import com.rosetta.test.model.Report;
+			import jakarta.inject.Inject;
 			import java.util.List;
-			import javax.inject.Inject;
 			
 			
 			public class TEST_REGCorpReportTabulator implements Tabulator<Report> {
@@ -133,10 +133,10 @@ class TabulatorTest {
 			import com.rosetta.model.lib.reports.Tabulator.NestedFieldValueImpl;
 			import com.rosetta.test.model.Report;
 			import com.rosetta.util.DottedPath;
+			import jakarta.inject.Inject;
 			import java.util.Arrays;
 			import java.util.List;
 			import java.util.Optional;
-			import javax.inject.Inject;
 			
 			
 			public class ReportTabulator implements Tabulator<Report> {
@@ -293,11 +293,11 @@ class TabulatorTest {
 			import com.rosetta.model.lib.reports.Tabulator.MultiNestedFieldValueImpl;
 			import com.rosetta.test.model.Report;
 			import com.rosetta.util.DottedPath;
+			import jakarta.inject.Inject;
 			import java.util.Arrays;
 			import java.util.List;
 			import java.util.Optional;
 			import java.util.stream.Collectors;
-			import javax.inject.Inject;
 			
 			
 			public class ReportTabulator implements Tabulator<Report> {

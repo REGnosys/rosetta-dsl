@@ -109,7 +109,7 @@ import org.eclipse.xtext.EcoreUtil2
 
 import static extension com.regnosys.rosetta.generator.java.enums.EnumHelper.convertValues
 import com.regnosys.rosetta.types.RObjectFactory
-import javax.inject.Inject
+import jakarta.inject.Inject
 
 class ExpressionGenerator extends RosettaExpressionSwitch<StringConcatenationClient, JavaScope> {
 
