@@ -37,6 +37,7 @@ import org.eclipse.xtext.scoping.impl.ImportedNamespaceAwareLocalScopeProvider
 import static com.regnosys.rosetta.rosetta.RosettaPackage.Literals.*
 import static com.regnosys.rosetta.rosetta.simple.SimplePackage.Literals.*
 import static com.regnosys.rosetta.rosetta.expression.ExpressionPackage.Literals.*
+import static com.regnosys.rosetta.rosetta.translate.TranslatePackage.Literals.*
 import com.regnosys.rosetta.rosetta.expression.InlineFunction
 import com.regnosys.rosetta.rosetta.RosettaAttributeReference
 import java.util.List
@@ -55,6 +56,11 @@ import com.regnosys.rosetta.rosetta.ParametrizedRosettaType
 import javax.inject.Inject
 import com.regnosys.rosetta.rosetta.expression.RosettaConstructorExpression
 import com.regnosys.rosetta.rosetta.expression.ConstructorKeyValuePair
+import com.regnosys.rosetta.rosetta.translate.Translation
+import com.regnosys.rosetta.rosetta.translate.TranslationRule
+import com.regnosys.rosetta.types.TypeSystem
+import com.regnosys.rosetta.rosetta.translate.TranslateMetaInstruction
+import com.regnosys.rosetta.rosetta.simple.Annotated
 import com.regnosys.rosetta.rosetta.expression.RosettaDeepFeatureCall
 import com.regnosys.rosetta.types.RDataType
 import com.regnosys.rosetta.utils.DeepFeatureCallUtil
@@ -72,6 +78,7 @@ class RosettaScopeProvider extends ImportedNamespaceAwareLocalScopeProvider {
 	static Logger LOGGER = LoggerFactory.getLogger(RosettaScopeProvider)
 	
 	@Inject RosettaTypeProvider typeProvider
+	@Inject TypeSystem typeSystem
 	@Inject extension RosettaExtensions
 	@Inject extension RosettaConfigExtension configs
 	@Inject extension RosettaFunctionExtensions
@@ -206,7 +213,7 @@ class RosettaScopeProvider extends ImportedNamespaceAwareLocalScopeProvider {
 							return Scopes.scopeFor(classRef.allAttributes)
 					}
 					return IScope.NULLSCOPE
-				}			
+				}
 				case ROSETTA_EXTERNAL_ENUM_VALUE__ENUM_REF: {
 					if (context instanceof RosettaExternalEnumValue) {
 						val enumRef = (context.eContainer as RosettaExternalEnum).typeRef
@@ -230,6 +237,27 @@ class RosettaScopeProvider extends ImportedNamespaceAwareLocalScopeProvider {
 				}
 				case ROSETTA_EXTERNAL_RULE_SOURCE__SUPER_SOURCES: {
 					return defaultScope(context, reference).filteredScope[it.EClass == ROSETTA_EXTERNAL_RULE_SOURCE]
+				}
+				case TRANSLATION_RULE__FEATURE: {
+					if (context instanceof TranslationRule) {
+						val translation = context.translation
+						return createExtendedFeatureScope(translation, typeSystem.typeCallToRType(translation.resultType))
+					}
+					return IScope.NULLSCOPE
+				}
+				case TRANSLATE_META_INSTRUCTION__META_FEATURE: {
+					if (context instanceof TranslateMetaInstruction) {
+						val container = context.eContainer
+						val annotated = if (container instanceof TranslationRule) {
+								container.feature
+							} else if (container instanceof Translation) {
+								container.resultType.type
+							}
+						if (annotated instanceof Annotated) {
+							return new SimpleScope(getMetaDescriptions(annotated))
+						}
+					}
+					return IScope.NULLSCOPE
 				}
 			}
 			// LOGGER.warn('''No scope defined for «context.class.simpleName» referencing «reference.name».''')
@@ -295,6 +323,9 @@ class RosettaScopeProvider extends ImportedNamespaceAwareLocalScopeProvider {
 					object.isPostCondition || descr.EObjectOrProxy.eContainingFeature !== FUNCTION__OUTPUT
 				])
 			}
+			Translation: {
+				Scopes.scopeFor(object.parameters.filter[name !== null], parentScope)
+			}
 			RosettaModel:
 				filteredScope(defaultScope(object, reference))[ descr |
 					#{DATA, ROSETTA_ENUMERATION, FUNCTION, ROSETTA_EXTERNAL_FUNCTION, ROSETTA_RULE}.contains(descr.EClass)
@@ -323,17 +354,23 @@ class RosettaScopeProvider extends ImportedNamespaceAwareLocalScopeProvider {
 			receiver.symbol
 		}
 		if (feature instanceof Attribute) {
-			val metas = feature.metaAnnotations.map[it.attribute?.name].filterNull.toList
-			if (metas !== null && !metas.isEmpty) {
-				allPosibilities.addAll(configs.findMetaTypes(feature).filter[
-					metas.contains(it.name.lastSegment.toString)
-				].map[new AliasedEObjectDescription(QualifiedName.create(it.name.lastSegment), it)])
-			}
+			allPosibilities.addAll(getMetaDescriptions(feature))
 		}
 		
 		return new SimpleScope(allPosibilities)
 	}
 	
+	private def Iterable<IEObjectDescription> getMetaDescriptions(Annotated obj) {
+		val metas = obj.metaAnnotations.map[it.attribute?.name].filterNull.toList
+		if (!metas.isEmpty) {
+			configs.findMetaTypes(obj).filter[
+				metas.contains(it.name.lastSegment.toString)
+			].map[new AliasedEObjectDescription(QualifiedName.create(it.name.lastSegment), it)]
+		} else {
+			emptyList
+		}
+	}
+
 	private def IScope createDeepFeatureScope(RType receiverType) {
 		if (receiverType instanceof RDataType) {
 			return Scopes.scopeFor(receiverType.findDeepFeatures)
